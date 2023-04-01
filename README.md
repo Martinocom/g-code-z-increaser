@@ -17,7 +17,9 @@ G1 Z15.0 F9000 ;move the platform down 15mm
 
 // At this point the program found the first reference to Z
 // Does nothing, just set isFirstZFound = true
+```
 
+```
 G92 E0 ;zero the extruded length
 G1 F200 E3 ;extrude 3mm of feed stock
 G92 E0 ;zero the extruded length again
@@ -34,7 +36,9 @@ G0 F7500 X62.565 Y94.134 Z0.3
 
 // At this point the program found the first reference to correct Z
 // Does nothing, just set isFirstZAlreadyPassed = true
+```
 
+```
 G0 X61.179 Y97.424
 M204 P1000
 ;TYPE:SKIRT
@@ -51,7 +55,9 @@ G0 F300 X66.32 Y105.918 Z0.5
 // At this point the program found the second reference to correct Z
 // It needs to change it and increase by 0.2.
 // The output will be => G0 F300 X66.32 Y105.918 Z0.7
+```
 
+```
 G0 F7500 X65.33 Y105.918
 G0 X64.94 Y107.518
 ...
@@ -62,7 +68,9 @@ M204 P500
 
 // At this point program already set the last Z so subsequent strings containing Z
 // are just ignored. Add all the rest of the file as is.
+```
 
+```
 M204 T500
 M107
 M117 Positioning
